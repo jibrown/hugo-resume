@@ -13,34 +13,9 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About</a>
       </li>
-      {{ if .Site.Params.showCV }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#cv">CV</a>
-          </li>
-      {{ end }}
       {{ if .Site.Params.showProjects }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#projects">Projects</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showOpenSource }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#open">Open Source</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showPublications }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#publications">Publications</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showExperience }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#experience">Experience</a>
-          </li>
-      {{ end }}
-      {{ if .Site.Params.showEducation }}
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showTeaching }}
@@ -48,9 +23,14 @@
             <a class="nav-link js-scroll-trigger" href="/#teaching">Teaching</a>
           </li>
       {{ end }}
+      {{ if .Site.Params.showCV }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#cv">CV</a>
+          </li>
+      {{ end }}
       {{ if .Site.Params.showBlog }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#blog">Blog</a>
+            <a class="nav-link js-scroll-trigger" href={{.Site.Params.blogAddress}} target="_blank">Blog</a>
           </li>
       {{ end }}
     </ul>
