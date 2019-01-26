@@ -3,7 +3,7 @@
     <h2 class="mb-5"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p>{{ .Content }}</p>
     {{ $featuredPages := where .Pages "Params.featured" true }}
-    {{ range $featuredPages }}
+    {{ range sort $featuredPages ".Date" "asc"}}
       {{ partial (printf "%s%s" .Section "Summary") . }}
     {{ end }}
   </div>
