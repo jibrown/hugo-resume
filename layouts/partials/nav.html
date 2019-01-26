@@ -13,9 +13,9 @@
       <li class="nav-item">
         <a class="nav-link js-scroll-trigger" href="{{ "#about" | relURL }}">About</a>
       </li>
-      {{ if .Site.Params.showSkills }}
+      {{ if .Site.Params.showCV }}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/#skills">Skills</a>
+            <a class="nav-link js-scroll-trigger" href="/#cv">CV</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showProjects }}
@@ -41,6 +41,11 @@
       {{ if .Site.Params.showEducation }}
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/#education">Education</a>
+          </li>
+      {{ end }}
+      {{ if .Site.Params.showTeaching }}
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#teaching">Teaching</a>
           </li>
       {{ end }}
       {{ if .Site.Params.showBlog }}

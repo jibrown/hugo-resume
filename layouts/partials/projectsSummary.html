@@ -8,8 +8,9 @@
     {{ end }}
   </div>
   <div class="resume-date">
-    <p>{{ .Description | safeHTML }}<p>
-    <p class><a href="{{.Permalink}}">Read more..</a></p>
+    <p style="padding:10px;" >{{ .Description | safeHTML }}<p>
+    <p >{{ with .Params.link }}<p style="padding:10px;">Link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}<p>
+    <!-- <p class><a href="{{.Permalink}}">Read more..</a></p> -->
   </div>
 </div>
 <div>{{ partial "techtags" . }}</div>
